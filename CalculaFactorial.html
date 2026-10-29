@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Factorial</title>
+</head>
+<body>
+
+<script>
+let numero;
+
+do {
+    numero = prompt("Ingresa un número entero positivo:");
+
+    if (isNaN(numero) || numero.trim() === "" || Number(numero) < 0) {
+        alert("Error: Debes ingresar un número positivo.");
+    }
+} while (isNaN(numero) || numero.trim() === "" || Number(numero) < 0);
+
+numero = Number(numero);
+
+let factorial = 1;
+
+for (let i = 1; i <= numero; i++) {
+    factorial *= i;
+}
+
+console.log(`Resultado: ${factorial}`);
+document.write(`<h2>Resultado: ${factorial}</h2>`);
+</script>
+
+</body>
+</html>
